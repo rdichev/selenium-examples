@@ -19,7 +19,7 @@ public class HomePage extends BasePage {
     }
 
     public ElementsPage goToElementsPage() {
-        driver.findElement(elements).click();
+        click(elements, driver);
         return new ElementsPage(driver);
     }
 

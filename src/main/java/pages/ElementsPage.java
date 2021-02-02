@@ -8,7 +8,7 @@ public class ElementsPage extends BasePage{
 
     By header = By.xpath("//div[@class='main-header' and text()='Elements']");
 
-    ElementsPage(WebDriver driver) {
+    public ElementsPage(WebDriver driver) {
         this.driver = driver;
     }
 

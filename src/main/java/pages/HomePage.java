@@ -14,7 +14,7 @@ public class HomePage extends BasePage {
     By bookStoreApplication = By.xpath("//h5[text()='Book Store Application']");
 
 
-    HomePage(WebDriver driver) {
+    public HomePage(WebDriver driver) {
         this.driver = driver;
     }
 

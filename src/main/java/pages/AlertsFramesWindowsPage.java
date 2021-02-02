@@ -8,7 +8,7 @@ public class AlertsFramesWindowsPage extends BasePage{
 
     By header = By.xpath("//div[@class='main-header' and text()='Alerts, Frame & Windows']");
 
-    AlertsFramesWindowsPage(WebDriver driver) {
+    public AlertsFramesWindowsPage(WebDriver driver) {
         this.driver = driver;
     }
 

@@ -9,7 +9,7 @@ public class LeftPanelPage extends BasePage{
 
     By leftPanel = By.cssSelector("div.left-pannel");
 
-    LeftPanelPage(WebDriver driver) {
+    public LeftPanelPage(WebDriver driver) {
         this.driver = driver;
     }
 

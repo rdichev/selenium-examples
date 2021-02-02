@@ -8,7 +8,7 @@ public class BookStoreApplicationPage {
 
     By header = By.xpath("//div[@class='main-header' and text()='Book Store']");
 
-    BookStoreApplicationPage(WebDriver driver) {
+    public BookStoreApplicationPage(WebDriver driver) {
         this.driver = driver;
     }
 

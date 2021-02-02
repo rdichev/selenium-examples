@@ -8,7 +8,7 @@ public class InteractionsPage extends BasePage{
 
     By header = By.xpath("//div[@class='main-header' and text()='Interactions']");
 
-    InteractionsPage(WebDriver driver) {
+    public InteractionsPage(WebDriver driver) {
         this.driver = driver;
     }
 

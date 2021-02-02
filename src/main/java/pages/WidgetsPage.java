@@ -8,7 +8,7 @@ public class WidgetsPage extends BasePage{
 
     By header = By.xpath("//div[@class='main-header' and text()='Widgets']");
 
-    WidgetsPage(WebDriver driver) {
+    public WidgetsPage(WebDriver driver) {
         this.driver = driver;
     }
 

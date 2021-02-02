@@ -1,4 +1,4 @@
-package java.pages;
+package pages;
 
 public class BasePage {
 

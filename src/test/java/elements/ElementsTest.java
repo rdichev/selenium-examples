@@ -8,7 +8,7 @@ public class ElementsTest extends BaseTest {
 
     @Test
     public void shouldNavigateToElementsPage() {
-        HomePage homePage = new HomePage(driver);
+        HomePage homePage = new HomePage(startNewDriver());
 
         ElementsPage elementsPage = homePage.goToElementsPage();
         assert elementsPage.isElementsPageDisplayed();

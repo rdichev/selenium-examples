@@ -10,7 +10,7 @@ import utils.ConfigFileReader;
 
 public class DriverManager {
 
-    public static WebDriver createDriver() {
+    public static WebDriver createWebDriver() {
         DriverType driverType = new ConfigFileReader().getDriverType();
         switch (driverType) {
             case CHROME:

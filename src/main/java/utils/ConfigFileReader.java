@@ -33,6 +33,14 @@ public class ConfigFileReader {
         return Long.parseLong(implicitWait);
     }
 
+    public long getDefaultWait() {
+        String defaultWait = getProperty("defaultWait");
+        if (defaultWait == null) {
+            throw new IllegalArgumentException("Invalid defaultWait value");
+        }
+        return Long.parseLong(defaultWait);
+    }
+
     public DriverType getDriverType() {
         String browserName = properties.getProperty("browser");
         switch (browserName) {

@@ -1,10 +1,12 @@
 package pages;
 
-import org.jsoup.Connection.Base;
+import enumeration.LeftPanelItemsEnum;
+import java.util.function.Function;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import pages.subpages.elements.TextBoxPage;
 
-public class LeftPanelPage extends BasePage{
+public class LeftPanelPage extends BasePage {
     WebDriver driver;
 
     By leftPanel = By.cssSelector("div.left-pannel");
@@ -15,5 +17,14 @@ public class LeftPanelPage extends BasePage{
 
     public boolean isLeftPanelDisplayed() {
         return driver.findElement(leftPanel).isDisplayed();
+    }
+
+    public void selectItem(LeftPanelItemsEnum item) {
+        driver.findElement(By.xpath("//span[text()='" + item.getItemName() + "']")).click();
+    }
+
+    public TextBoxPage goToTextBoxPage() {
+        selectItem(LeftPanelItemsEnum.TEXT_BOX);
+        return new TextBoxPage(driver);
     }
 }

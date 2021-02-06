@@ -13,7 +13,6 @@ public class HomePage extends BasePage {
     By interactions = By.xpath("//h5[text()='Interactions']");
     By bookStoreApplication = By.xpath("//h5[text()='Book Store Application']");
 
-
     public HomePage(WebDriver driver) {
         this.driver = driver;
     }
@@ -23,4 +22,28 @@ public class HomePage extends BasePage {
         return new ElementsPage(driver);
     }
 
+    public FormsPage goToFormsPage() {
+        click(forms, driver);
+        return new FormsPage(driver);
+    }
+
+    public WidgetsPage goToWidgetPage() {
+        click(widgets, driver);
+        return new WidgetsPage(driver);
+    }
+
+    public AlertsFramesWindowsPage goToAlertsFramesWindowsPage() {
+        click(alertsFramesWindows, driver);
+        return new AlertsFramesWindowsPage(driver);
+    }
+
+    public InteractionsPage goToInteractionsPage() {
+        click(interactions, driver);
+        return new InteractionsPage(driver);
+    }
+
+    public BookStoreApplicationPage goToBookStoreApplicationPage() {
+        click(bookStoreApplication, driver);
+        return new BookStoreApplicationPage(driver);
+    }
 }

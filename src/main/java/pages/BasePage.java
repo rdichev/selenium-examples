@@ -10,7 +10,7 @@ public class BasePage {
         driver.findElement(by).click();
     }
 
-    public void typeText(By by, String text, WebDriver driver) {
+    public void enterText(By by, String text, WebDriver driver) {
         driver.findElement(by).sendKeys(text);
     }
 

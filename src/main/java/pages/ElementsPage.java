@@ -15,4 +15,8 @@ public class ElementsPage extends BasePage{
     public boolean isElementsPageDisplayed() {
         return driver.findElement(header).isDisplayed();
     }
+
+    public LeftPanelPage goToLeftPanelPage() {
+        return new LeftPanelPage(driver);
+    }
 }

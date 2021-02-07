@@ -11,6 +11,7 @@ public class Checkbox {
         if (!option.isSelected()) {
             option.click();
         }
+        //TODO: log message that the checkbox is already checked
     }
 
     public static void uncheck(By by, WebDriver driver) {
@@ -18,6 +19,7 @@ public class Checkbox {
         if (option.isSelected()) {
             option.click();
         }
+        //TODO: log message that the checkbox is already unchecked
     }
 
 }

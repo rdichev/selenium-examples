@@ -4,6 +4,7 @@ import enumeration.LeftPanelItemsEnum;
 import java.util.function.Function;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import pages.subpages.elements.CheckBoxPage;
 import pages.subpages.elements.TextBoxPage;
 
 public class LeftPanelPage extends BasePage {
@@ -26,5 +27,10 @@ public class LeftPanelPage extends BasePage {
     public TextBoxPage goToTextBoxPage() {
         selectItem(LeftPanelItemsEnum.TEXT_BOX);
         return new TextBoxPage(driver);
+    }
+
+    public CheckBoxPage goToCheckBoxPage() {
+        selectItem(LeftPanelItemsEnum.CHECK_BOX);
+        return new CheckBoxPage(driver);
     }
 }

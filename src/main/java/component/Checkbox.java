@@ -6,7 +6,14 @@ import org.openqa.selenium.WebElement;
 
 public class Checkbox {
 
-    public void check(By by, WebDriver driver) {
+    public static void check(By by, WebDriver driver) {
+        WebElement option = driver.findElement(by);
+        if (!option.isSelected()) {
+            option.click();
+        }
+    }
+
+    public static void uncheck(By by, WebDriver driver) {
         WebElement option = driver.findElement(by);
         if (option.isSelected()) {
             option.click();

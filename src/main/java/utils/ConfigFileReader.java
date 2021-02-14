@@ -42,7 +42,16 @@ public class ConfigFileReader {
     }
 
     public DriverType getDriverType() {
-        String browserName = properties.getProperty("browser");
+        String browserName;
+        // if the browser is specified as a system property the test will use it
+        // otherwise the browser specified in configuration.properties will be used
+        String browserSystemProperty = System.getProperty("browser");
+        if (browserSystemProperty == null) {
+            browserName = properties.getProperty("browser");
+        } else {
+            browserName = browserSystemProperty;
+        }
+
         switch (browserName) {
             case "chrome":
                 return DriverType.CHROME;
